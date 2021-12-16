@@ -1,0 +1,10 @@
+.hidden {
+  display: none;
+}
+
+#inputlabel {
+  border: 1px solid #666;
+  border-radius: 5%;
+  padding: 0.5em;
+  background-image: linear-gradient( to bottom, #fff, #ccc );
+}
