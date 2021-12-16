@@ -14,6 +14,9 @@ function handleFile(e) {
   let img = document.createElement("img");
   img.src = URL.createObjectURL(file[0]);
   
+  //Show the result section
+  showResult()
+
   //.onload needed for canvas to work
   img.onload=function () {
     // frame.png is 768x768
@@ -27,3 +30,7 @@ function handleFile(e) {
 
 }
 
+const showResult = () => {
+  const resultsContainer = document.getElementById('result-container')
+  resultsContainer.style.display = 'block'
+}

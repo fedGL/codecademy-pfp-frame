@@ -1,5 +1,9 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 body {
-  background-color: #F5FCFF; 
+  background-color: #FFF0E5; 
   text-align: center;
   font-family: Roboto, sans-serif; /* Not my favorite font but it's a decent placeholder */
 }
@@ -10,22 +14,49 @@ main {
   padding: 20px;
 }
 
+h1 {
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+hr {
+  background-color: whitesmoke;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
 .hidden {
   display: none;
 }
 
 #inputlabel {
-  border: 1px solid #666;
-  border-radius: 5%;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
   padding: 0.5em;
-  /* background-image: linear-gradient( to bottom, #fff, #ccc ); */
   color: white;
   background-color: #1557FF;
-  transition: 250ms ease-in;
+  transition: 150ms ease-in;
+  outline: none;
 }
 
 #inputlabel:hover {
   background-color: #3A10E5;
+  transform: scale(1.05)
+}
+
+#result-container {
+  display: none;
 }
 
 #result {
