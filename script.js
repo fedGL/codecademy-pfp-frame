@@ -1,6 +1,5 @@
-const img1 = document.getElementById("profile");
-const resEle = document.getElementById("result");
-const context = resEle.getContext("2d");
+const outputImage = document.getElementById("result");
+const context = outputImage.getContext("2d");
 
 let img2 = document.createElement("img");
 img2.src = "/assets/frame.png";
@@ -19,11 +18,10 @@ function handleFile(e) {
   img.onload=function () {
     // frame.png is 768x768
     // match output to frame size
-    // resEle.width = 1024;
-    // resEle.height = 768;
+    outputImage.width = 768;
+    outputImage.height = 768;
     context.globalAlpha = 1.0;
     context.drawImage(img, 0, 0,768,768);
-    context.globalAlpha = 1.0;
     context.drawImage(img2, 0, 0);
   }
 

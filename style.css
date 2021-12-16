@@ -1,3 +1,15 @@
+body {
+  background-color: #F5FCFF; 
+  text-align: center;
+  font-family: Roboto, sans-serif; /* Not my favorite font but it's a decent placeholder */
+}
+
+main {
+  background-color: white;
+  margin: 0 50px;
+  padding: 20px;
+}
+
 .hidden {
   display: none;
 }
@@ -6,10 +18,17 @@
   border: 1px solid #666;
   border-radius: 5%;
   padding: 0.5em;
-  background-image: linear-gradient( to bottom, #fff, #ccc );
+  /* background-image: linear-gradient( to bottom, #fff, #ccc ); */
+  color: white;
+  background-color: #1557FF;
+  transition: 250ms ease-in;
+}
+
+#inputlabel:hover {
+  background-color: #3A10E5;
 }
 
 #result {
-  max-width: 100%;
-
+  width: 100%;
+  max-width: 15rem;
 }
