@@ -3,7 +3,7 @@ const resEle = document.getElementById("result");
 const context = resEle.getContext("2d");
 
 let img2 = document.createElement("img");
-img2.src = "/frame.png";
+img2.src = "/assets/frame.png";
 
 const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFile, false);
