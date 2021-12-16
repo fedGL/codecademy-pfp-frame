@@ -8,3 +8,8 @@
   padding: 0.5em;
   background-image: linear-gradient( to bottom, #fff, #ccc );
 }
+
+#result {
+  max-width: 100%;
+
+}

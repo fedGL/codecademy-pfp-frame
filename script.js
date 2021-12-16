@@ -19,8 +19,8 @@ function handleFile(e) {
   img.onload=function () {
     // frame.png is 768x768
     // match output to frame size
-    resEle.width = 768;
-    resEle.height = 768;
+    // resEle.width = 1024;
+    // resEle.height = 768;
     context.globalAlpha = 1.0;
     context.drawImage(img, 0, 0,768,768);
     context.globalAlpha = 1.0;
