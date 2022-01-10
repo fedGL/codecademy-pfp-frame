@@ -1,8 +1,14 @@
 const outputImage = document.getElementById("result");
 const context = outputImage.getContext("2d");
 
-let img2 = document.createElement("img");
-img2.src = "/assets/frame.png";
+let squareFrame = document.createElement("img");
+squareFrame.src = "assets/frame.png";
+
+let roundFrame = document.createElement("img");
+roundFrame.src = "assets/circle.png";
+
+let roundMask = document.createElement("img");
+roundMask.src = "assets/mask.png";
 
 const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFile, false);
@@ -24,10 +30,19 @@ function handleFile(e) {
     outputImage.width = 768;
     outputImage.height = 768;
     context.globalAlpha = 1.0;
-    context.drawImage(img, 0, 0,768,768);
-    context.drawImage(img2, 0, 0);
-  }
 
+    const rounded = document.getElementById("rounded").checked;
+    const frame = rounded ? roundFrame : squareFrame;
+
+    if (rounded) {
+      context.drawImage(roundMask, 0, 0);
+      context.globalCompositeOperation = "source-in";
+    }
+
+    context.drawImage(img, 0, 0, 768, 768);
+    context.globalCompositeOperation = "source-atop";
+    context.drawImage(frame, 0, 0);
+  };
 }
 
 const showResult = () => {
